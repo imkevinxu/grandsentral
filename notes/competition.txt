@@ -1,0 +1,31 @@
+Survey data on Mail Merging
+===========================
+https://docs.google.com/spreadsheet/ccc?key=0Av_0L7E7U7HidFRVSmlPQUlqd2N5MGQ3akhEeEpHRlE#gid=0
+
+
+Current ways to do mail merge
+=============================
+http://www.quora.com/Whats-the-best-software-for-mail-merging?q=mail+merge
+http://code.google.com/googleapps/appsscript/articles/mail_merge.html
+Microsoft Word or Outlook
+
+Newsletters
+===========
+http://www.getresponse.com/
+http://mailchimp.com/resources/guides/
+http://tinyletter.com/
+
+
+Email Marketing / CRM Tools
+===========================
+http://www1.toutapp.com/
+http://www.contactually.com/
+http://www.streamsend.com/
+http://litmus.com/
+
+
+Email APIs
+==========
+http://sendgrid.com/
+http://postmarkapp.com/
+http://mailgun.net/

@@ -1,0 +1,64 @@
+ACTION ITEMS
+============
+Email MENTORS
+BACKDATE BLOG
+LOTS OF SURVEY DATA IN < 2 WEEKS AFTER CREATE MVP
+FIND TARGET USER - courtesy of Ricky
+
+
+Features
+=====
+Google Analytics
+Import CSV
+"Powered by" - in free emails
+Email confirmation for not authenticated people
+"Please excuse errors, still in alpha mode"
+Multiple variables
+NLP To: box -> Tagged blocks for user feedback
+NLP pick apart first name
+Sentence where you can personalize
+Stripe payments
+Personalized mass texts using Twilio
+A way to organize contacts
+
+
+MARKETING
+=========
+Grab Twitter
+Advertise in 21times
+Show HN
+
+PROBLEMS
+========
+Spam
+
+
+USE CASES
+=========
+Community Management
+Event Organizers
+Meetup Organizers
+	- All past attendees of eventbrite/meetup
+Event invitations
+Thank you letters
+
+
+INITIAL USES
+============
+AKPsi Rush
+BASES E-Bootcamp / GEM
+
+
+RULES
+=====
+Opt-in
+Address
+Unsubscribe
+
+
+ACCELERATORS
+============
+highland - 3/1 and 4/5
+lightspeed - 3/2
+ycombinator - 3/28
+startx summer???
