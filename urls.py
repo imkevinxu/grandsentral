@@ -7,15 +7,10 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'grandsentral.views.home', name='home'),
-    # url(r'^grandsentral/', include('grandsentral.foo.urls')),
-
-    # Uncomment the lines below to enable admin:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 
-	url(r'^$', 'views.home', name="root"),
+	url(r'^$', 'views.home', name="home"),
 )
 
 urlpatterns += staticfiles_urlpatterns()

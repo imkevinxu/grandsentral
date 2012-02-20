@@ -4,4 +4,4 @@ from django.core.context_processors import csrf
 from django.template import RequestContext
 
 def home(request):
-	return render_to_response('index.html', context_instance=RequestContext(request))
+	return render_to_response('index.html')

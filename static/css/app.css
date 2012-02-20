@@ -1,0 +1,25 @@
+/* Foundation v2.1.5 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.center {
+	text-align:center;
+}
+
+#home {
+	margin-top:30px;
+}
+
+#home input, #home textarea {
+	width:100%;
+	margin-bottom:15px;
+}
+
+textarea#email_body {
+	height:300px;
+}
