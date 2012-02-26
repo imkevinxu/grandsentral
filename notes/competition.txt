@@ -9,6 +9,7 @@ http://www.quora.com/Whats-the-best-software-for-mail-merging?q=mail+merge
 http://code.google.com/googleapps/appsscript/articles/mail_merge.html
 Microsoft Word or Outlook
 
+
 Newsletters
 ===========
 http://www.getresponse.com/
@@ -22,6 +23,8 @@ http://www1.toutapp.com/
 http://www.contactually.com/
 http://www.streamsend.com/
 http://litmus.com/
+https://www.airtimehq.com/
+http://www.icontact.com/
 
 
 Email APIs

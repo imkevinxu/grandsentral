@@ -1,10 +1,11 @@
 ACTION ITEMS
 ============
-Email MENTORS
-BACKDATE BLOG
+Email MENTORS with link
+BACKDATE BLOG with link
+CREATE SKELETAL DECK
 LOTS OF SURVEY DATA IN < 2 WEEKS AFTER CREATE MVP
 FIND TARGET USER - courtesy of Ricky
-
+	- Personalized email marketing?
 
 Features
 =====
@@ -62,3 +63,4 @@ highland - 3/1 and 4/5
 lightspeed - 3/2
 ycombinator - 3/28
 startx summer???
+First Floor Labs

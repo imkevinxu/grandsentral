@@ -141,6 +141,12 @@ INSTALLED_APPS = (
     'south',
 )
 
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'grandsentral'
+EMAIL_HOST_PASSWORD = 'bananapoptart145'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 LOGIN_REDIRECT_URL = '/'
 
 # A sample logging configuration. The only tangible logging

@@ -5,17 +5,26 @@
     <div class="row" id="home">
     	<div class="six columns centered">
 			    		
-		    <h1 class="center">GrandSentral</h1>
+		    <h1 class="center"><a href="{% url home %}">GrandSentral</a></h1>
 
-		    <form action="#" method="post" class="nice">
+		    <form action="#" method="post" class="nice">{% csrf_token %}
 		    	<div>
-		    		<label for="email_from">From Email:</label>
-		    		<input type="text" name="email_from" id="email_from" placeholder="From: cool@dude.com" tabindex="1" class="input-text" />
+		    		<label for="email_from_name">Your Name:</label>
+		    		<input type="text" name="email_from_name" id="email_from_name" placeholder="Cool Dude" tabindex="1" class="input-text" />
+
+		    		<label for="email_from_email">Your Email:</label>
+		    		<input type="text" name="email_from_email" id="email_from_email" placeholder="cool@dude.com" tabindex="1" class="input-text" />
 		    	</div>
 
 		    	<div>
-		    		<label for="name">Recipients:</label>
-		    		<input type="text" name="" id="" placeholder="To: cool@dude.com" tabindex="1" class="input-text" />
+		    		<label for="email_recipients">Recipients:</label>
+		    		<input type="text" name="email_recipients_name" placeholder="Awesome girl" tabindex="1" class="input-text" />
+		    		<input type="text" name="email_recipients_email" placeholder="awesome@girl.com" tabindex="1" class="input-text" />
+		    	</div>
+
+		    	<div>
+		    		<label for="email_subject">Subject Line:</label>
+		    		<input type="text" name="email_subject" placeholder="Free for coffee?" tabindex="1" class="input-text" />
 		    	</div>
 		    	
 		    	<div>
