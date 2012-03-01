@@ -5,8 +5,6 @@ BACKDATE BLOG with link
 
 Features
 ========
-
-Create data model for all emails and attach UID
 Email confirmation for not authenticated people
 form validation
 "Please excuse errors, still in alpha mode"

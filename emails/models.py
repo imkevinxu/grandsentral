@@ -1,9 +1,5 @@
 from django.db import models
 from django.contrib import admin
-from binascii import hexlify
-
-def _createId():
-    return hexlify(os.urandom(16))
 
 class Email(models.Model):
 	from_name 		= models.CharField(max_length=50)
@@ -13,8 +9,8 @@ class Email(models.Model):
 	subject   		= models.CharField(max_length=100)
 	body      		= models.TextField()
 
-	#email_date		= models.DateTimeField(required=True)
-	#unique_id		= models.CharField(max_length=16, primary_key=True, default=_createId)
+	email_date		= models.DateTimeField(auto_now_add=True)
+	unique_id		= models.CharField(max_length=16, primary_key=True, unique=True)
 
 	def __unicode__(self):
-		return u'%s -> %s: %s' % (self.from_name, self.to_name, self.subject)
+		return u'%s -> %s [%s]' % (self.from_name, self.to_name, self.subject)

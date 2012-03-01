@@ -14,6 +14,7 @@ h1#title a {
 	font-size:55px;
 	color: #FBFAFC;
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	margin-left: -20px;
 }
 
 h1#title span.focus { color: #CACACA; }
