@@ -5,12 +5,14 @@ BACKDATE BLOG with link
 
 Features
 ========
+
+Create data model for all emails and attach UID
+Email confirmation for not authenticated people
+"Please excuse errors, still in alpha mode"
 favicon
 LIMIT 200
 Import CSV
 "Powered by" - in free emails
-Email confirmation for not authenticated people
-"Please excuse errors, still in alpha mode"
 Multiple variables
 NLP To: box -> Tagged blocks for user feedback
 	- Copy and past from spreadsheet to To: bar
@@ -24,17 +26,16 @@ Personalized mass texts using Twilio
 A way to organize contacts
 Error messages
 Thank you page
-Create data model for all emails and attach UID
 
 MARKETING
 =========
+Facebook Page
 AKPsi Rush
 BASES E-Bootcamp / GEM
-Facebook Page
 Advertise in 21times
 Show HN
 Facebook Groups - Think Outside, Stanford Startups
-Email Designkids
+Email Designkids, BASES, AKPsi
 ASSU Campaigns
 Email GDOCS - Mail Merge Interviews
 Email GDOCS - Survey People

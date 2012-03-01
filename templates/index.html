@@ -2,38 +2,39 @@
 
 {% block content %}
     
-    <div class="container">
-	    <div class="row" id="home">
-	    	<div class="six columns centered">
-				    		
-			    <h1 class="center"><a href="{% url home %}">GrandSentral</a></h1>
+    <div class="container" id="home">
+	    <div class="row">
+	    	<div class="six columns centered" id="letterbox">
+			
+				<img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane">
+	    		<div id="redline"></div>
 
-			    <form action="#" method="post" class="nice">{% csrf_token %}
-			    	<div>
-			    		<label for="email_from_name">Your Name:</label>
-			    		<input type="text" name="email_from_name" id="email_from_name" placeholder="Cool Dude" tabindex="1" class="input-text" />
+			    <h1 id="title" class="center"><a href="{% url home %}">GrandSentral</a></h1>
 
-			    		<label for="email_from_email">Your Email:</label>
-			    		<input type="text" name="email_from_email" id="email_from_email" placeholder="cool@dude.com" tabindex="1" class="input-text" />
+			    <form action="/send" method="post" class="nice">{% csrf_token %}
+			    	<div id="frombox">
+			    		<span class="context">From</span>
+			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name"/>
+			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email"/>
 			    	</div>
 
-			    	<div>
-			    		<label for="email_recipients">Recipients:</label>
-			    		<input type="text" name="email_recipients_name" placeholder="Awesome girl" tabindex="1" class="input-text" />
-			    		<input type="text" name="email_recipients_email" placeholder="awesome@girl.com" tabindex="1" class="input-text" />
+			    	<div id="tobox">
+			    		<span class="context">To</span>
+			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name"/>
+			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email"/>
 			    	</div>
 
-			    	<div>
-			    		<label for="email_subject">Subject:</label>
-			    		<input type="text" name="email_subject" placeholder="Free for coffee?" tabindex="1" class="input-text" />
+			    	<div id="subjectbox">
+			    		<span class="context">Subject</span>
+			    		<input type="text" name="email_subject" class="input-text" />
 			    	</div>
 			    	
-			    	<div>
+			    	<div id="emailbox">
 			    		<label for="email_body">Email Body</label>
 			    		<textarea cols="40" rows="8"name="email_body" id="email_body">Hi *|First Name|*</textarea>
 			    	</div>
 
-			    	<div>
+			    	<div id="submitbox">
 			    		<input type="submit" value="Send" class="nice large blue button" />
 			    	</div>
 			    </form>

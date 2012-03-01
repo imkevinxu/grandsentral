@@ -1,25 +1,55 @@
-/* Foundation v2.1.5 http://foundation.zurb.com */
-/* Artfully masterminded by ZURB  */
-
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.center {
-	text-align:center;
-}
+body { background: url(/static/img/purty_wood.png); }
+.center { text-align:center; }
+.error { color: red; }
 
 #home {
-	margin-top:20px;
+	margin-top:50px;
+	margin-bottom:20px;
 }
 
-#home input, #home textarea {
-	width:100%;
-	margin-bottom:15px;
+h1#title a{
+	
+}
+
+#letterbox {
+	padding:20px 50px;
+	background: url(/static/img/lined-paper-background.png);
+}
+
+#letterbox img#paperplane {
+	position:absolute;
+	top:-45px;
+	left:-80px;
+	z-index:999;
+}
+
+#letterbox #redline {
+	position:absolute;
+	top:0;
+	left:20px;
+
+	height:100%;
+	width:2px;
+	border-left: 1px solid #F9A5A7;
+	border-right: 1px solid #F9A5A7;
+}
+
+#letterbox #frombox span.context, #letterbox #tobox span.context, #letterbox #subjectbox span.context {
+	display: inline-block;
+	width: 60px;
+	font-weight:bold
+}
+
+#letterbox #frombox input, #letterbox #tobox input { display: inline-block; }
+#letterbox #frombox input.name, #letterbox #tobox input.name { width: 30%; }
+#letterbox #frombox input.email, #letterbox #tobox input.email { width: 50%; }
+
+#letterbox #subjectbox input {
+	display: inline-block;
+	width: 80%;
 }
 
 textarea#email_body {
 	height:300px;
+	width:95%;
 }
