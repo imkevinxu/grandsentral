@@ -2,37 +2,42 @@ ACTION ITEMS
 ============
 Email MENTORS with link
 BACKDATE BLOG with link
-CREATE SKELETAL DECK
-LOTS OF SURVEY DATA IN < 2 WEEKS AFTER CREATE MVP
-FIND TARGET USER - courtesy of Ricky
-	- Personalized email marketing?
 
 Features
-=====
-Google Analytics
+========
+favicon
+LIMIT 200
 Import CSV
 "Powered by" - in free emails
 Email confirmation for not authenticated people
 "Please excuse errors, still in alpha mode"
 Multiple variables
 NLP To: box -> Tagged blocks for user feedback
+	- Copy and past from spreadsheet to To: bar
+	- Creates iPhone message-like tags
+	- Tab, comma, parentheses, etc. delimited
 NLP pick apart first name
 Sentence where you can personalize
+WYSIWYG Formatting
 Stripe payments
 Personalized mass texts using Twilio
 A way to organize contacts
-
+Error messages
+Thank you page
+Create data model for all emails and attach UID
 
 MARKETING
 =========
-Grab Twitter
+AKPsi Rush
+BASES E-Bootcamp / GEM
+Facebook Page
 Advertise in 21times
 Show HN
-
-PROBLEMS
-========
-Spam
-
+Facebook Groups - Think Outside, Stanford Startups
+Email Designkids
+ASSU Campaigns
+Email GDOCS - Mail Merge Interviews
+Email GDOCS - Survey People
 
 USE CASES
 =========
@@ -42,25 +47,3 @@ Meetup Organizers
 	- All past attendees of eventbrite/meetup
 Event invitations
 Thank you letters
-
-
-INITIAL USES
-============
-AKPsi Rush
-BASES E-Bootcamp / GEM
-
-
-RULES
-=====
-Opt-in
-Address
-Unsubscribe
-
-
-ACCELERATORS
-============
-highland - 3/1 and 4/5
-lightspeed - 3/2
-ycombinator - 3/28
-startx summer???
-First Floor Labs
