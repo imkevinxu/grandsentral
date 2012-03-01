@@ -8,8 +8,10 @@ Features
 
 Create data model for all emails and attach UID
 Email confirmation for not authenticated people
+form validation
 "Please excuse errors, still in alpha mode"
 favicon
+create html file like SUD
 LIMIT 200
 Import CSV
 "Powered by" - in free emails

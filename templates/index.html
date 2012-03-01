@@ -6,7 +6,7 @@
 	    <div class="row">
 	    	<div class="six columns centered" id="letterbox">
 			
-				<img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane">
+				<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
 	    		<div id="redline"></div>
 
 			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
@@ -19,11 +19,13 @@
 			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" value="kevin@imkevinxu.com"/>
 			    	</div>
 
-			    	<div id="tobox">
+			    	<div class="tobox">
 			    		<span class="context">To</span>
 			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" value="Mike Liu"/>
-			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" value="mikesholiu@gmail.com"/>
+			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" value="kevin@imkevinxu.com"/>
 			    	</div>
+
+			    	<div id="addToBox">+</div>
 
 			    	<div id="subjectbox">
 			    		<span class="context">Subject</span>
@@ -31,12 +33,12 @@
 			    	</div>
 			    	
 			    	<div id="emailbox">
-			    		<textarea cols="40" rows="8" name="email_body" id="email_body">Hi @@First,
+			    		<textarea cols="40" rows="8" name="email_body" id="email_body">Hi [First],
 
 	I hear you are a pretty awesome person. It would be great to meetup some time, maybe over some Ike's Place or Coupa Cafe.
 
 All the best,
-Friend</textarea>
+Your Friend</textarea>
 			    	</div>
 
 			    	<div id="submitbox">
@@ -51,9 +53,9 @@ Friend</textarea>
 	    		<div id="redline"></div>
 	    		<h3 class="center">FAQ</h3>
 				<ul>
-					<li><strong>@@First</strong> will be replaced by the Names in the To: field</li>
-					<li>Press <strong>Shift+Enter</strong> to create a new line (just like Facebook)</li>
+					<li><strong>[First]</strong> will be replaced by the Names in the To: field</li>
 					<li>An <strong>email confirmation</strong> will be sent to your From: email</li>
+					<li>Only allowed to email a max of <strong>10</strong> emails currently</li>
 				</ul>
     		</div>
 	    </div>

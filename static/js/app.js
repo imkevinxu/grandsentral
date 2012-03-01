@@ -2,6 +2,8 @@
 $(document).ready(function () {
 
 	/* Use this js doc for all application specific JS */
+	$("textarea").tabby();
+
 	$('h1#title').on("mouseover", function() {
 		$('h1#title span').addClass("focus");
 	}).on("mouseout", function() {
@@ -12,11 +14,22 @@ $(document).ready(function () {
 		$('#helpbox').slideToggle(300);
 	});
 
+	$('#addToBox').on("click", function() {
+		if ($('.tobox').length < 10) {
+			var $tobox = $('.tobox').first().clone();
+			$tobox	.find('span.context').css("text-indent", "-9999px")
+					.end()
+					.find('input').text("").val("");
+			$(this).after($tobox);
+		} else {
+			$(this).css("border-color", "red");
+		}
+	});
+
 	/*$('textarea#email_body').on("focus", function() {
 		$this = $(this);
-		var text = $this.text();
 		$this.text("");
-		$this.attr("placeholder", "Hi @@First");
+		$this.attr("placeholder", "Hi [First]");
 		$this.off("click");
 	});*/
 

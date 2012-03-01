@@ -4,7 +4,7 @@ body { background: url(/static/img/purty_wood.png); }
 .clearfix { clear: both; }
 
 #home {
-	margin-top:50px;
+	margin-top:55px;
 	margin-bottom:20px;
 }
 
@@ -56,7 +56,7 @@ h1#title span.focus { color: #CACACA; }
 	font-weight:bold;
 	text-align:center;
 
-	border: 1px solid black;
+	border: 1px solid #666;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
@@ -67,34 +67,52 @@ h1#title span.focus { color: #CACACA; }
 	background-color: #CACACA;
 }
 
-#letterbox #frombox span.context, #letterbox #tobox span.context, #letterbox #subjectbox span.context {
+#letterbox #frombox span.context, #letterbox .tobox span.context, #letterbox #subjectbox span.context {
 	display: inline-block;
 	width: 60px;
+	height:28px;
 	font-weight:bold;
 	font-size:13px;
-	height:28px;
 }
 
-#letterbox #frombox input, #letterbox #tobox input { display: inline-block; }
-#letterbox #frombox input.name, #letterbox #tobox input.name { width: 30%; }
-#letterbox #frombox input.email, #letterbox #tobox input.email { width: 50%; }
+#letterbox #frombox input, #letterbox .tobox input { display: inline-block; }
+#letterbox #frombox input.name, #letterbox .tobox input.name { width: 30%; }
+#letterbox #frombox input.email, #letterbox .tobox input.email { width: 50%; }
 
 #letterbox #subjectbox input {
 	display: inline-block;
 	width: 81%;
 }
 
-#letterbox  textarea#email_body {
-	height:300px;
+#letterbox textarea#email_body {
+	height:270px;
 	width:95%;
 }
 
 #letterbox #submitbox input { width: 95%; }
 
+#letterbox #addToBox {
+	position: absolute;
+	top:139px;
+	right:12px;
+	height:12px;
+	padding: 4px;
+	border: 1px solid #666;
+
+	font-size:20px;
+	font-weight:bold;
+	line-height:5px;
+}
+
+#letterbox #addToBox:hover {
+	background-color: #CACACA;
+	cursor:pointer;
+}
+
 #helpbox {
 	display:none;
 	z-index:1;
-	padding:16px 0 20px 0;
+	padding:16px 0 5px 0;
 	background: url(/static/img/lined-paper-background.png) 0px 18px;
 	-moz-box-shadow:    5px 5px 10px 0px #6F6E6F;
 	-webkit-box-shadow: 5px 5px 10px 0px #6F6E6F;
