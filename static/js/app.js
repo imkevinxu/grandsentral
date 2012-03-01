@@ -12,14 +12,18 @@ $(document).ready(function () {
 
 	$('#questionmark').on("hover", function() {
 		$('#helpbox').slideToggle(300);
+	}).on("click", function() {
+		var $helpbox = $('#helpbox');
+		$helpbox.slideToggle(300);
+		$(this).off("hover");
 	});
 
 	$('#addToBox').on("click", function() {
 		if ($('.tobox').length < 10) {
 			var $tobox = $('.tobox').first().clone();
-			$tobox	.find('span.context').css("text-indent", "-9999px")
-					.end()
-					.find('input').text("").val("");
+			$tobox.find('span.context').css("text-indent", "-9999px")
+				  .end()
+				  .find('input').text("").val("");
 			$(this).after($tobox);
 		} else {
 			$(this).css("border-color", "red");

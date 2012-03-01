@@ -122,4 +122,51 @@ h1#title span.focus { color: #CACACA; }
 #helpbox ul { margin-left:70px; }
 #helpbox li { list-style-type: disc; margin: 8px 0;}
 
+#success_page ul#successful_emails { margin-top:13px; }
+#success_page ul#successful_emails li {
+	list-style-type: disc;
+	margin-left:35px;
+	font-size:16px;
+}
 
+#success_page h6 {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+#success_page #sent_email {
+	margin-left: 35px;
+}
+
+#success_page p {
+	line-height: 20px;
+	margin-bottom:10px;
+}
+
+
+
+
+
+
+
+/*
+	Paper Airplane Animation
+*/
+
+#letterbox #paperplane {
+	-webkit-animation: fly 1s;
+	-moz-animation: fly 5s;
+}
+
+@-webkit-keyframes fly {
+  0% {
+    top: -180px;
+    left: 200px;
+  }
+
+  100% {
+    top: -45px;
+	left: -80px;
+  }
+}

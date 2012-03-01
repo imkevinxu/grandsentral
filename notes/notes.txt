@@ -10,11 +10,14 @@ Create data model for all emails and attach UID
 Email confirmation for not authenticated people
 form validation
 "Please excuse errors, still in alpha mode"
-favicon
-create html file like SUD
 LIMIT 200
+Optional BCC?
 Import CSV
+
+WYSIWYG Formatting
+create html file like SUD
 "Powered by" - in free emails
+
 Multiple variables
 NLP To: box -> Tagged blocks for user feedback
 	- Copy and past from spreadsheet to To: bar
@@ -22,13 +25,14 @@ NLP To: box -> Tagged blocks for user feedback
 	- Tab, comma, parentheses, etc. delimited
 NLP pick apart first name
 Sentence where you can personalize
-WYSIWYG Formatting
+
 Stripe payments
 Personalized mass texts using Twilio
 A way to organize contacts
 Error messages
-Thank you page
+
 PLANE ANIMATION UPON CLICK!
+favicon
 responsive
 apple icon
 social icons (fb, twitter)

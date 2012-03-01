@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <div class="container" id="home">
+	    <div class="row">
+	    	<div class="six columns centered" id="letterbox">
+			
+				<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
+	    		<div id="redline"></div>
+
+			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
+
+			    <div id="success_page">
+			    	<h4>Thanks {{ from }}, {{ count }} {% if count > 1 %}emails have{% else %}email has{% endif %} been sent to:</h4>
+
+				    <ul id="successful_emails">
+				    	{% for recipient in to_emails %}
+						    <li>{{ recipient }}</li>
+						{% endfor %}
+				    </ul>
+
+				    <br/>
+				    <h6>The following email was sent:</h6>
+
+				    <div id="sent_email">
+					    <p><strong>Subject:</strong> {{ subject }}</p>
+
+					    <p>{{ body|linebreaks }}</p>
+					</div>
+
+				    <br/>
+					<a href="{% url home %}">&larr; Back to Homepage</a>
+				</div>
+
+	    	</div>
+	    </div>
+	</div>
+	
+{% endblock %}
