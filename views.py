@@ -25,7 +25,7 @@ def send(request):
 			body = unformatted_body.replace("[First]", grabFirstName(formatted_email))
 			message_list.append((subject, body, from_email, [formatted_email]))
 
-		#if len(message_list) > 0:
+		if len(message_list) > 0:
 			#send_mass_mail(message_list, fail_silently=False)
 
 		return render_to_response('success.html',
