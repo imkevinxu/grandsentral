@@ -26,6 +26,11 @@ Personalized mass texts using Twilio
 A way to organize contacts
 Error messages
 Thank you page
+PLANE ANIMATION UPON CLICK!
+responsive
+apple icon
+social icons (fb, twitter)
+made by...
 
 MARKETING
 =========

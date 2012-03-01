@@ -2,6 +2,23 @@
 $(document).ready(function () {
 
 	/* Use this js doc for all application specific JS */
+	$('h1#title').on("mouseover", function() {
+		$('h1#title span').addClass("focus");
+	}).on("mouseout", function() {
+		$('h1#title span').removeClass("focus");
+	});
+
+	$('#questionmark').on("hover", function() {
+		$('#helpbox').slideToggle(300);
+	});
+
+	/*$('textarea#email_body').on("focus", function() {
+		$this = $(this);
+		var text = $this.text();
+		$this.text("");
+		$this.attr("placeholder", "Hi @@First");
+		$this.off("click");
+	});*/
 
 	/* TABS --------------------------------- */
 	/* Remove if you don't need :) */

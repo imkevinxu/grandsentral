@@ -9,29 +9,34 @@
 				<img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane">
 	    		<div id="redline"></div>
 
-			    <h1 id="title" class="center"><a href="{% url home %}">GrandSentral</a></h1>
+			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
+			    <div id="questionmark">?</div>
 
-			    <form action="/send" method="post" class="nice">{% csrf_token %}
+			    <form action="{% url send %}" method="post" class="nice">{% csrf_token %}
 			    	<div id="frombox">
 			    		<span class="context">From</span>
-			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name"/>
-			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email"/>
+			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" value="Kevin Xu"/>
+			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" value="kevin@imkevinxu.com"/>
 			    	</div>
 
 			    	<div id="tobox">
 			    		<span class="context">To</span>
-			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name"/>
-			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email"/>
+			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" value="Mike Liu"/>
+			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" value="mikesholiu@gmail.com"/>
 			    	</div>
 
 			    	<div id="subjectbox">
 			    		<span class="context">Subject</span>
-			    		<input type="text" name="email_subject" class="input-text" />
+			    		<input type="text" name="email_subject" class="input-text" value="Awesome subject"/>
 			    	</div>
 			    	
 			    	<div id="emailbox">
-			    		<label for="email_body">Email Body</label>
-			    		<textarea cols="40" rows="8"name="email_body" id="email_body">Hi *|First Name|*</textarea>
+			    		<textarea cols="40" rows="8" name="email_body" id="email_body">Hi @@First,
+
+	I hear you are a pretty awesome person. It would be great to meetup some time, maybe over some Ike's Place or Coupa Cafe.
+
+All the best,
+Friend</textarea>
 			    	</div>
 
 			    	<div id="submitbox">
@@ -40,6 +45,17 @@
 			    </form>
 
 	    	</div>
+	    </div>
+	    <div class="row">
+	    	<div class="six columns centered" id="helpbox">
+	    		<div id="redline"></div>
+	    		<h3 class="center">FAQ</h3>
+				<ul>
+					<li><strong>@@First</strong> will be replaced by the Names in the To: field</li>
+					<li>Press <strong>Shift+Enter</strong> to create a new line (just like Facebook)</li>
+					<li>An <strong>email confirmation</strong> will be sent to your From: email</li>
+				</ul>
+    		</div>
 	    </div>
 	</div>
 	
