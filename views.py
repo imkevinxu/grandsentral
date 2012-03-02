@@ -44,6 +44,7 @@ def hold(request):
 			email.save()
 			holding_email_list.append(email);
 
+		#TODO: STOP Confirmation from happening if emails blank
 		createConfirmationEmail(holding_email_list, from_name, from_email,
 								formatted_to_email_list)
 

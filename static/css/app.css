@@ -194,7 +194,7 @@ h1#title span.focus { color: #CACACA; }
 
 #letterbox #paperplane {
 	-webkit-animation: fly 1s;
-	-moz-animation: fly 5s;
+	-moz-animation: fly 1s;
 }
 
 @-webkit-keyframes fly {
