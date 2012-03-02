@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
 	url(r'^$', 'views.home', name="home"),
-	url(r'^send', 'views.send', name="send"),
+	url(r'^hold', 'views.hold', name="hold"),
 )
 
 urlpatterns += staticfiles_urlpatterns()

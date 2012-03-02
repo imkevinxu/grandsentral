@@ -11,19 +11,22 @@
 
 			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
 
-			    <div id="success_page">
-			    	<h4>Thanks {{ from }}, {{ count }} {% if count > 1 %}emails have{% else %}email has{% endif %} been sent to:</h4>
+			    <div id="holding_page">
+			    	<h4>Thanks {{ from }},<br/>Check your email for a <u>confirmation</u> link.</h4>
+			    	<hr/>
 
-				    <ul id="successful_emails">
+			    	<h6>{{ count }} {% if count > 1 %}emails are{% else %}email is{% endif %} in the holding bay for:</h6>
+
+				    <ul id="emails">
 				    	{% for recipient in to_emails %}
 						    <li>{{ recipient }}</li>
 						{% endfor %}
 				    </ul>
 
 				    <br/>
-				    <h6>The following email was sent:</h6>
+				    <h6>The following email is ready to be sent:</h6>
 
-				    <div id="sent_email">
+				    <div id="email">
 					    <p><strong>Subject:</strong> {{ subject }}</p>
 
 					    <p>{{ body|linebreaks }}</p>

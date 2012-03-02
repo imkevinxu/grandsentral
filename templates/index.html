@@ -14,7 +14,7 @@
 			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
 			    <div id="questionmark">?</div>
 
-			    <form action="{% url send %}" method="post" class="nice">{% csrf_token %}
+			    <form action="{% url hold %}" method="post" class="nice">{% csrf_token %}
 			    	<div id="frombox">
 			    		<span class="context">From</span>
 			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" value="Kevin Xu"/>

@@ -10,7 +10,16 @@ class Email(models.Model):
 	body      		= models.TextField()
 
 	email_date		= models.DateTimeField(auto_now_add=True)
-	unique_id		= models.CharField(max_length=16, primary_key=True, unique=True)
+	uid 			= models.CharField(max_length=16, primary_key=True, unique=True)
+	sent 			= models.BooleanField()
 
 	def __unicode__(self):
 		return u'%s -> %s [%s]' % (self.from_name, self.to_name, self.subject)
+
+class Confirm(models.Model):
+	uid				= models.CharField(max_length=16, primary_key=True, unique=True)
+	date			= models.DateTimeField(auto_now_add=True)
+	email_ids		= models.ManyToManyField("Email")
+
+	def __unicode__(self):
+		return u'Hash: %s' % (self.uid)
