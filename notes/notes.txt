@@ -37,6 +37,7 @@ responsive
 apple icon
 social icons (fb, twitter) on intro and success page
 made by...
+use mysql
 
 MARKETING
 =========
