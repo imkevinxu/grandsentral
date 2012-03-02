@@ -12,6 +12,8 @@ urlpatterns = patterns('',
 
 	url(r'^$', 'views.home', name="home"),
 	url(r'^hold', 'views.hold', name="hold"),
+	url(r'^success', 'views.success', name="success"),
+	
 	url(r'^confirm/(?P<hash>\w+)/$', 'views.confirm'),
 )
 

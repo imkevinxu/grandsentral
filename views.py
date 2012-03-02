@@ -13,8 +13,10 @@ from emails.models import Email, Confirm
 def _createId():
     return hexlify(os.urandom(16))
 
+
 def home(request):
 	return render_to_response('index.html', context_instance=RequestContext(request))
+
 
 def hold(request):
 	if request.method == "POST":
@@ -61,32 +63,13 @@ def hold(request):
 
 	return HttpResponseRedirect('/')
 
-def confirm(request, hash):
-	confirm = Confirm.objects.get(uid=hash)
-	emails_to_send = confirm.emails
-	confirm.delete()
-	for email in emails_to_send:
-		sendEmail(email)
-	return HttpResponseRedirect('/')
-
-# Send email based on email object
-def sendEmail(email):
-	from_email = formatEmail(from_array[0], from_array[1])
-	formatted_to_email_list = []
-	message_list = []
-	formatted_to_email_list.append(formatEmail(to_name_list[i], to_email_list[i]));
-	message_list.append((subject, body, from_email, [formatted_to_email_list[i]]))
-
-	#if len(message_list) > 0:
-		#send_mass_mail(message_list, fail_silently=False)
-
 
 # Creating the confirmation email
 def createConfirmationEmail(holding_email_list, from_name, from_email,
 							formatted_to_email_list):
-	confirm_email = Confirm(uid = _createId())
+	confirm_email = Confirm(uid = _createId(), confirmed = False)
 	confirm_email.save()
-	confirm_email.email_ids = holding_email_list
+	confirm_email.emails = holding_email_list
 	confirm_email.save()
 
 	recipient = formatEmail(from_name, from_email)
@@ -98,7 +81,37 @@ def createConfirmationEmail(holding_email_list, from_name, from_email,
 					'emails' : formatted_to_email_list})
 	email = EmailMultiAlternatives(subject, text_content, 'Kevin Xu <admin@grandsentral.com>', [recipient])
 	email.attach_alternative(html_content, "text/html")
-	#email.send()
+	email.send()
+
+
+def confirm(request, hash):
+	confirm = Confirm.objects.get(uid=hash)
+	if confirm.confirmed:
+		return HttpResponseRedirect('/')
+	else:
+		sendEmail(confirm.emails.all())
+		confirm.confirmed = True
+		confirm.save()
+	return HttpResponseRedirect('/success')
+
+def success(request):
+	return render_to_response('success.html', context_instance=RequestContext(request))
+
+# Send email based on email list
+def sendEmail(emails_to_send):
+	message_list = []
+	for email in emails_to_send:
+		if email.sent == False:
+			from_email = formatEmail(email.from_name, email.from_email)
+			to_email = formatEmail(email.to_name, email.to_email)
+			subject = email.subject
+			body = email.body
+			message_list.append((subject, body, from_email, [to_email]))
+			email.sent = True
+			email.save()
+
+	if len(message_list) > 0:
+		send_mass_mail(message_list, fail_silently=False)
 
 
 # Fancier functions

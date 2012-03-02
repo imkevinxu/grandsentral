@@ -12,6 +12,7 @@ Optional BCC?
 Import CSV
 
 WYSIWYG Formatting
+CSS paragraph styling mail merged emails
 create html file like SUD
 allow subject to have name
 "Powered by" - in free emails

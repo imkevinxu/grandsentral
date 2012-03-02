@@ -24,18 +24,18 @@ $(document).ready(function () {
 			$tobox.find('span.context').css("text-indent", "-9999px")
 				  .end()
 				  .find('input').text("").val("");
-			$(this).after($tobox);
+			$('.tobox').last().after($tobox);
 		} else {
 			$(this).css("border-color", "red");
 		}
 	});
 
-	/*$('textarea#email_body').on("focus", function() {
+	$('textarea#email_body').on("focus", function() {
 		$this = $(this);
 		$this.text("");
 		$this.attr("placeholder", "Hi [First]");
 		$this.off("click");
-	});*/
+	});
 
 	/* TABS --------------------------------- */
 	/* Remove if you don't need :) */

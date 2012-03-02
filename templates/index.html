@@ -17,21 +17,21 @@
 			    <form action="{% url hold %}" method="post" class="nice">{% csrf_token %}
 			    	<div id="frombox">
 			    		<span class="context">From</span>
-			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" value="Kevin Xu"/>
-			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" value="kevin@imkevinxu.com"/>
+			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" />
+			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" />
 			    	</div>
 
 			    	<div class="tobox">
 			    		<span class="context">To</span>
-			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" value="Mike Liu"/>
-			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" value="kevin@imkevinxu.com"/>
+			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" />
+			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" />
 			    	</div>
 
 			    	<div id="addToBox">+</div>
 
 			    	<div id="subjectbox">
 			    		<span class="context">Subject</span>
-			    		<input type="text" name="email_subject" class="input-text" value="Awesome subject"/>
+			    		<input type="text" name="email_subject" class="input-text" />
 			    	</div>
 			    	
 			    	<div id="emailbox">

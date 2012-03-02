@@ -20,6 +20,7 @@ class Confirm(models.Model):
 	uid				= models.CharField(max_length=16, primary_key=True, unique=True)
 	date			= models.DateTimeField(auto_now_add=True)
 	emails			= models.ManyToManyField("Email")
+	confirmed		= models.BooleanField()
 
 	def __unicode__(self):
 		return u'Hash: %s' % (self.uid)
