@@ -7,16 +7,10 @@ from django.core.mail import send_mail, send_mass_mail, EmailMultiAlternatives
 from datetime import datetime
 from binascii import hexlify
 import os
-
 from emails.models import Email, Confirm
-
-def _createId():
-    return hexlify(os.urandom(16))
-
 
 def home(request):
 	return render_to_response('index.html', context_instance=RequestContext(request))
-
 
 def hold(request):
 	if request.method == "POST":
@@ -63,7 +57,6 @@ def hold(request):
 
 	return HttpResponseRedirect('/')
 
-
 # Creating the confirmation email
 def createConfirmationEmail(holding_email_list, from_name, from_email,
 							formatted_to_email_list):
@@ -82,7 +75,6 @@ def createConfirmationEmail(holding_email_list, from_name, from_email,
 	email = EmailMultiAlternatives(subject, text_content, 'Kevin Xu <admin@grandsentral.com>', [recipient])
 	email.attach_alternative(html_content, "text/html")
 	email.send()
-
 
 def confirm(request, hash):
 	confirm = Confirm.objects.get(uid=hash)
@@ -120,3 +112,7 @@ def formatEmail(name, email):
 
 def getFirstName(name):
 	return name.split(' ')[0]
+
+def _createId():
+    return hexlify(os.urandom(16))
+

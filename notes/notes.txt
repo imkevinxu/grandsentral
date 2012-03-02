@@ -5,15 +5,14 @@ BACKDATE BLOG with link
 
 Features
 ========
-Email confirmation for not authenticated people
 form validation
 LIMIT 200
 Optional BCC?
 Import CSV
 
+EMAIL PRIVACY DATABASE
 WYSIWYG Formatting
-CSS paragraph styling mail merged emails
-create html file like SUD
+CSS paragraph styling mail merged emails in html_content
 allow subject to have name
 "Powered by" - in free emails
 
