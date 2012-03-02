@@ -12,6 +12,7 @@ urlpatterns = patterns('',
 
 	url(r'^$', 'views.home', name="home"),
 	url(r'^hold', 'views.hold', name="hold"),
+	url(r'^confirm/(?P<hash>\w+)/$', 'views.confirm'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

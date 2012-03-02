@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+    
+	<p style="margin: 0 0 1.4em 0;">Thanks for using GrandSentral {{ from }}!</p>
+
+	<p style="margin: 0 0 1.4em 0;">Click here to send your mail merged emails <a href="http://grandsentral.com/confirm/{{ uid }}" target="_blank">http://grandsentral.com/confirm/{{ uid }}</a></p>
+
+	<p style="margin: 0 0 1.4em 0;">Here is a list of the people your email will be sent to:</p>
+	<ul style="margin: 0 0 1.4em 0;">
+	{% for email in emails %}
+		<li>{{ email}}</li>
+	{% endfor %}
+	</ul>
+
+	<p style="margin: 0 0 1.4em 0;">Please let me know if there are any questions or problems, we appreciate your support and want to build a great product :)</p>
+
+	--<br/>
+	Kevin Xu<br/>
+	Co-Founder, GrandSentral<br/>
+	<a href="http://twitter.com/imkevinxu" target="_blank">@imkevinxu</a>
+
+</body>
+</html>

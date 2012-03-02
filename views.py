@@ -2,7 +2,8 @@ from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanen
 from django.shortcuts import render_to_response, get_object_or_404
 from django.core.context_processors import csrf
 from django.template import RequestContext
-from django.core.mail import send_mail, send_mass_mail
+from django.template.loader import render_to_string
+from django.core.mail import send_mail, send_mass_mail, EmailMultiAlternatives
 from datetime import datetime
 from binascii import hexlify
 import os
@@ -17,6 +18,8 @@ def home(request):
 
 def hold(request):
 	if request.method == "POST":
+
+		# Grab all the data from POST requests
 		subject = request.POST["email_subject"]
 		unformatted_body = request.POST["email_body"]
 
@@ -26,6 +29,7 @@ def hold(request):
 		to_name_list = request.POST.getlist("email_recipients_name")
 		to_email_list = request.POST.getlist("email_recipients_email")
 		
+		# Format all the data and store into lists of correct emails
 		formatted_to_email_list = []
 		holding_email_list = []
 		for i in range(len(to_name_list)):
@@ -44,11 +48,8 @@ def hold(request):
 			email.save()
 			holding_email_list.append(email);
 
-		# Creating the confirmation email
-		confirm_email = Confirm(uid = _createId())
-		confirm_email.save()
-		confirm_email.email_ids = holding_email_list
-		confirm_email.save()
+		createConfirmationEmail(holding_email_list, from_name, from_email,
+								formatted_to_email_list)
 
 		return render_to_response('holding.html',
 			{"count" : len(formatted_to_email_list),
@@ -60,21 +61,47 @@ def hold(request):
 
 	return HttpResponseRedirect('/')
 
-#def sendEmail():
+def confirm(request, hash):
+	confirm = Confirm.objects.get(uid=hash)
+	emails_to_send = confirm.emails
+	confirm.delete()
+	for email in emails_to_send:
+		sendEmail(email)
+	return HttpResponseRedirect('/')
 
-#		from_email = formatEmail(from_array[0], from_array[1])
-#		formatted_to_email_list = []
-#		message_list = []
-#			formatted_to_email_list.append(formatEmail(to_name_list[i], to_email_list[i]));
-#			message_list.append((subject, body, from_email, [formatted_to_email_list[i]]))
+# Send email based on email object
+def sendEmail(email):
+	from_email = formatEmail(from_array[0], from_array[1])
+	formatted_to_email_list = []
+	message_list = []
+	formatted_to_email_list.append(formatEmail(to_name_list[i], to_email_list[i]));
+	message_list.append((subject, body, from_email, [formatted_to_email_list[i]]))
+
+	#if len(message_list) > 0:
+		#send_mass_mail(message_list, fail_silently=False)
 
 
-		#if len(message_list) > 0:
-			#send_mass_mail(message_list, fail_silently=False)
+# Creating the confirmation email
+def createConfirmationEmail(holding_email_list, from_name, from_email,
+							formatted_to_email_list):
+	confirm_email = Confirm(uid = _createId())
+	confirm_email.save()
+	confirm_email.email_ids = holding_email_list
+	confirm_email.save()
+
+	recipient = formatEmail(from_name, from_email)
+	subject = 'GrandSentral Mailing Confirmation for ' + getFirstName(from_name)
+	text_content = "Click here to send your mail merged emails http://grandsentral.com/confirm/" + confirm_email.uid
+	html_content = render_to_string('email/confirmation.html',
+					{'uid' : confirm_email.uid,
+					'from' : getFirstName(from_name),
+					'emails' : formatted_to_email_list})
+	email = EmailMultiAlternatives(subject, text_content, 'Kevin Xu <admin@grandsentral.com>', [recipient])
+	email.attach_alternative(html_content, "text/html")
+	#email.send()
 
 
 # Fancier functions
-
 def formatEmail(name, email):
 	return name+" <"+email+">"
 

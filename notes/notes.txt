@@ -7,7 +7,6 @@ Features
 ========
 Email confirmation for not authenticated people
 form validation
-"Please excuse errors, still in alpha mode"
 LIMIT 200
 Optional BCC?
 Import CSV
