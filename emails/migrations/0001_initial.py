@@ -11,21 +11,22 @@ class Migration(SchemaMigration):
         # Adding model 'Email'
         db.create_table('emails_email', (
             ('from_name', self.gf('django.db.models.fields.CharField')(max_length=50)),
-            ('from_email', self.gf('django.db.models.fields.CharField')(max_length=50)),
+            ('from_email', self.gf('django.db.models.fields.EmailField')(max_length=75)),
             ('to_name', self.gf('django.db.models.fields.CharField')(max_length=50)),
-            ('to_email', self.gf('django.db.models.fields.CharField')(max_length=50)),
+            ('to_email', self.gf('django.db.models.fields.EmailField')(max_length=75)),
             ('subject', self.gf('django.db.models.fields.CharField')(max_length=100)),
             ('body', self.gf('django.db.models.fields.TextField')()),
             ('date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
-            ('uid', self.gf('django.db.models.fields.CharField')(unique=True, max_length=16, primary_key=True)),
+            ('uid', self.gf('django.db.models.fields.CharField')(unique=True, max_length=32, primary_key=True)),
             ('sent', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
         db.send_create_signal('emails', ['Email'])
 
         # Adding model 'Confirm'
         db.create_table('emails_confirm', (
-            ('uid', self.gf('django.db.models.fields.CharField')(unique=True, max_length=16, primary_key=True)),
+            ('uid', self.gf('django.db.models.fields.CharField')(unique=True, max_length=32, primary_key=True)),
             ('date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, blank=True)),
+            ('confirmed', self.gf('django.db.models.fields.BooleanField')(default=False)),
         ))
         db.send_create_signal('emails', ['Confirm'])
 
@@ -53,21 +54,22 @@ class Migration(SchemaMigration):
     models = {
         'emails.confirm': {
             'Meta': {'object_name': 'Confirm'},
+            'confirmed': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'date': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'emails': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['emails.Email']", 'symmetrical': 'False'}),
-            'uid': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '16', 'primary_key': 'True'})
+            'uid': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '32', 'primary_key': 'True'})
         },
         'emails.email': {
             'Meta': {'object_name': 'Email'},
             'body': ('django.db.models.fields.TextField', [], {}),
             'date': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
-            'from_email': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
+            'from_email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
             'from_name': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
             'sent': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'subject': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
-            'to_email': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
+            'to_email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
             'to_name': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
-            'uid': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '16', 'primary_key': 'True'})
+            'uid': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '32', 'primary_key': 'True'})
         }
     }
 
