@@ -53,6 +53,7 @@ minifiy js/css
 DEBUG=TRUE/FALSe
 Turn on admin email in order to get error messages
 404/500
+BLOG
 
 helper text when textbox in focus
 helper text next to + button
