@@ -46,8 +46,6 @@ gmail plugin
 
 PLANE ANIMATION UPON CLICK!
 responsive
-social icons (fb, twitter) on intro and success page
-ribbon for social icons
 about box
 use mysql
 minifiy js/css
