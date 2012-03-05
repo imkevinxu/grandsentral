@@ -7,14 +7,17 @@ Features
 ========
 form validation
 LIMIT 200
-Optional BCC?
+Optional BCC? to sent to self
 Import CSV
 add README
 SLOW SERVER especially on confirmation (threads??)
 move to mysql
 perfect html email spacing
 diff variations of 'first'
-capitalize first name
+more variables like [last] [fullname]
+capitalize first name in body
+examples of use cases
+
 
 EMAIL PRIVACY DATABASE
 WYSIWYG Formatting
@@ -44,20 +47,32 @@ social icons (fb, twitter) on intro and success page
 ribbon for social icons
 made by...
 use mysql
+minifiy js/css
+DEBUG=TRUE/FALSe
+Turn on admin email in order to get error messages
+404/500
+check small resolutions
+
+helper text when textbox in focus
+helper text next to + button
+helper text as placeholder for email body
+
 
 MARKETING
 =========
 Facebook Page
-AKPsi Rush
 BASES E-Bootcamp / GEM
 Advertise in 21times
 Show HN
+check landit emails
 Facebook Groups - Think Outside, Stanford Startups
-Email Designkids, BASES, AKPsi
+Email Designkids, BASES
 ASSU Campaigns
 Email GDOCS - Mail Merge Interviews
 Email GDOCS - Survey People
+check stickies
 Greek - AKPsi, SYZ, KDPhi, Sigma Theta Psi (Bauer)
+ask tweets
 
 USE CASES
 =========

@@ -77,7 +77,7 @@ def createConfirmationEmail(holding_email_list, from_name, from_email,
 					{'uid' : confirm_email.uid,
 					'from' : getFirstName(from_name),
 					'emails' : formatted_to_email_list})
-	email = EmailMultiAlternatives(subject, text_content, 'Kevin Xu <admin@grandsentral.com>', [recipient])
+	email = EmailMultiAlternatives(subject, text_content, 'GrandSentral Admin <admin@grandsentral.com>', [recipient])
 	email.attach_alternative(html_content, "text/html")
 	email.send()
 
