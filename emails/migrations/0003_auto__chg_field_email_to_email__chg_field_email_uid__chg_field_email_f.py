@@ -12,13 +12,13 @@ class Migration(SchemaMigration):
         db.alter_column('emails_email', 'to_email', self.gf('django.db.models.fields.EmailField')(max_length=75))
 
         # Changing field 'Email.uid'
-        db.alter_column('emails_email', 'uid', self.gf('django.db.models.fields.CharField')(unique=True, max_length=32, primary_key=True))
+        db.alter_column('emails_email', 'uid', self.gf('django.db.models.fields.CharField')(max_length=32, primary_key=True))
 
         # Changing field 'Email.from_email'
         db.alter_column('emails_email', 'from_email', self.gf('django.db.models.fields.EmailField')(max_length=75))
 
         # Changing field 'Confirm.uid'
-        db.alter_column('emails_confirm', 'uid', self.gf('django.db.models.fields.CharField')(unique=True, max_length=32, primary_key=True))
+        db.alter_column('emails_confirm', 'uid', self.gf('django.db.models.fields.CharField')(max_length=32, primary_key=True))
 
 
     def backwards(self, orm):
@@ -42,7 +42,7 @@ class Migration(SchemaMigration):
             'confirmed': ('django.db.models.fields.BooleanField', [], {'default': 'False'}),
             'date': ('django.db.models.fields.DateTimeField', [], {'auto_now_add': 'True', 'blank': 'True'}),
             'emails': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['emails.Email']", 'symmetrical': 'False'}),
-            'uid': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '32', 'primary_key': 'True'})
+            'uid': ('django.db.models.fields.CharField', [], {'max_length': '32', 'primary_key': 'True'})
         },
         'emails.email': {
             'Meta': {'object_name': 'Email'},
@@ -54,7 +54,7 @@ class Migration(SchemaMigration):
             'subject': ('django.db.models.fields.CharField', [], {'max_length': '100'}),
             'to_email': ('django.db.models.fields.EmailField', [], {'max_length': '75'}),
             'to_name': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
-            'uid': ('django.db.models.fields.CharField', [], {'unique': 'True', 'max_length': '32', 'primary_key': 'True'})
+            'uid': ('django.db.models.fields.CharField', [], {'max_length': '32', 'primary_key': 'True'})
         }
     }
 
