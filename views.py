@@ -24,6 +24,10 @@ def hold(request):
 
 		to_name_list = request.POST.getlist("email_recipients_name")
 		to_email_list = request.POST.getlist("email_recipients_email")
+
+		#TODO: QUICK HACKY FORM VALIDATION
+		if subject == "" or unformatted_body == "" or from_name == "" or to_name_list[0] == "" or to_email_list[0] == "":
+			return HttpResponseRedirect('/')
 		
 		# Format all the data and store into lists of correct emails
 		formatted_to_email_list = []
