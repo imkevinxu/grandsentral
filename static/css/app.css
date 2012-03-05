@@ -3,7 +3,7 @@ body { background: url(/static/img/purty_wood.png); }
 .error { color: red; }
 .clearfix { clear: both; }
 
-#home {
+.container {
 	margin-top:55px;
 	margin-bottom:20px;
 }
@@ -184,6 +184,32 @@ h1#title span.focus { color: #CACACA; }
 }
 
 
+/*
+	Social Box
+
+*/
+
+#socialbox {
+	margin-top:25px;
+}
+
+.fb-like {
+	top:-2px;
+}
+
+a#imkevinxu {
+	color:white;
+	font-weight:bold;
+	font-size:20px;
+	top:-2px;
+	position:relative;
+	text-shadow: 1px 1px 1px #000; 
+}
+
+a#imkevinxu:hover {
+	color:inherit;
+	text-shadow: none;
+}
 
 
 
@@ -198,6 +224,18 @@ h1#title span.focus { color: #CACACA; }
 }
 
 @-webkit-keyframes fly {
+  0% {
+    top: -180px;
+    left: 200px;
+  }
+
+  100% {
+    top: -45px;
+	left: -80px;
+  }
+}
+
+@-moz-keyframes fly {
   0% {
     top: -180px;
     left: 200px;

@@ -2,42 +2,40 @@
 
 {% block content %}
     
-    <div class="container" id="home">
-	    <div class="row">
-	    	<div class="six columns centered" id="letterbox">
-			
-				<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
-	    		<div id="redline"></div>
+    <div class="row">
+    	<div class="six columns centered" id="letterbox">
+		
+			<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
+    		<div id="redline"></div>
 
-			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
+		    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
 
-			    <div id="holding_page">
-			    	<h4>Thanks {{ from }},<br/>Check your email for a <u>confirmation</u> link.</h4>
-			    	<hr/>
+		    <div id="holding_page">
+		    	<h4>Thanks {{ from }},<br/>Check your email for a <u>confirmation</u> link.</h4>
+		    	<hr/>
 
-			    	<h6>{{ count }} {% if count > 1 %}emails are{% else %}email is{% endif %} in the holding bay for:</h6>
+		    	<h6>{{ count }} {% if count > 1 %}emails are{% else %}email is{% endif %} in the holding bay for:</h6>
 
-				    <ul id="emails">
-				    	{% for recipient in to_emails %}
-						    <li>{{ recipient }}</li>
-						{% endfor %}
-				    </ul>
+			    <ul id="emails">
+			    	{% for recipient in to_emails %}
+					    <li>{{ recipient }}</li>
+					{% endfor %}
+			    </ul>
 
-				    <br/>
-				    <h6>The following email is ready to be sent:</h6>
+			    <br/>
+			    <h6>The following email is ready to be sent:</h6>
 
-				    <div id="email">
-					    <p><strong>Subject:</strong> {{ subject }}</p>
+			    <div id="email">
+				    <p><strong>Subject:</strong> {{ subject }}</p>
 
-					    <p>{{ body|linebreaks }}</p>
-					</div>
-
-				    <br/>
-					<a href="{% url home %}">&larr; Back to Homepage</a>
+				    <p>{{ body|linebreaks }}</p>
 				</div>
 
-	    	</div>
-	    </div>
-	</div>
+			    <br/>
+				<a href="{% url home %}">&larr; Back to Homepage</a>
+			</div>
+
+    	</div>
+    </div>
 	
 {% endblock %}

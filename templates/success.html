@@ -2,27 +2,25 @@
 
 {% block content %}
     
-    <div class="container" id="home">
-	    <div class="row">
-	    	<div class="six columns centered" id="letterbox">
-			
-				<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
-	    		<div id="redline"></div>
+    <div class="row">
+    	<div class="six columns centered" id="letterbox">
+		
+			<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
+    		<div id="redline"></div>
 
-			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
+		    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
 
-			    <div id="success_page">
-			    	<h4>Your emails have been <span>successfully</span> sent!</h4><br/>
+		    <div id="success_page">
+		    	<h4>Your emails have been <span>successfully</span> sent!</h4><br/>
 
-			    	<img src="/static/img/happycat.jpg" alt="happy cat"><br/>
+		    	<img src="/static/img/happycat.jpg" alt="happy cat"><br/>
 
-			    	<p>Please let us know how your experience was. If you have any questions, frustrations, bugs or joys at all please email <a href="mailto:admin@grandsentral.com">admin@grandsentral.com</a>. Thank you!</p>
+		    	<p>Please let us know how your experience was. If you have any questions, frustrations, bugs or joys at all please email <a href="mailto:admin@grandsentral.com">admin@grandsentral.com</a>. Thank you!</p>
 
-					<a href="{% url home %}">&larr; Back to Homepage</a>
-				</div>
+				<a href="{% url home %}">&larr; Back to Homepage</a>
+			</div>
 
-	    	</div>
-	    </div>
-	</div>
+    	</div>
+    </div>
 	
 {% endblock %}

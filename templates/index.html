@@ -2,65 +2,63 @@
 
 {% block content %}
     
-    <div class="container" id="home">
-	    <div class="row">
-	    	<div class="six columns centered" id="letterbox">
-			
-				<div id="paperplane">
-					<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
-				</div>
-	    		<div id="redline"></div>
+    <div class="row">
+    	<div class="six columns centered" id="letterbox">
+		
+			<div id="paperplane">
+				<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
+			</div>
+    		<div id="redline"></div>
 
-			    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
-			    <div id="questionmark">?</div>
+		    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
+		    <div id="questionmark">?</div>
 
-			    <form action="{% url hold %}" method="post" class="nice">{% csrf_token %}
-			    	<div id="frombox">
-			    		<span class="context">From</span>
-			    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" />
-			    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" />
-			    	</div>
+		    <form action="{% url hold %}" method="post" class="nice">{% csrf_token %}
+		    	<div id="frombox">
+		    		<span class="context">From</span>
+		    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" />
+		    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" />
+		    	</div>
 
-			    	<div class="tobox">
-			    		<span class="context">To</span>
-			    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" />
-			    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" />
-			    	</div>
+		    	<div class="tobox">
+		    		<span class="context">To</span>
+		    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" />
+		    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" />
+		    	</div>
 
-			    	<div id="addToBox">+</div>
+		    	<div id="addToBox">+</div>
 
-			    	<div id="subjectbox">
-			    		<span class="context">Subject</span>
-			    		<input type="text" name="email_subject" class="input-text" />
-			    	</div>
-			    	
-			    	<div id="emailbox">
-			    		<textarea cols="40" rows="8" name="email_body" id="email_body">Hi [First],
+		    	<div id="subjectbox">
+		    		<span class="context">Subject</span>
+		    		<input type="text" name="email_subject" class="input-text" />
+		    	</div>
+		    	
+		    	<div id="emailbox">
+		    		<textarea cols="40" rows="8" name="email_body" id="email_body">Hi [First],
 
-	I hear you are a pretty awesome person. It would be great to meetup some time, maybe over some Ike's Place or Coupa Cafe.
+I hear you are a pretty awesome person. It would be great to meetup some time, maybe over some Ike's Place or Coupa Cafe.
 
 All the best,
 Your Friend</textarea>
-			    	</div>
+		    	</div>
 
-			    	<div id="submitbox">
-			    		<input type="submit" value="Send" class="nice large blue button" />
-			    	</div>
-			    </form>
+		    	<div id="submitbox">
+		    		<input type="submit" value="Send" class="nice large blue button" />
+		    	</div>
+		    </form>
 
-	    	</div>
-	    </div>
-	    <div class="row">
-	    	<div class="six columns centered" id="helpbox">
-	    		<div id="redline"></div>
-	    		<h3 class="center">FAQ</h3>
-				<ul>
-					<li><strong>[First]</strong> will be replaced by the Names in the To: field</li>
-					<li>An <strong>email confirmation</strong> will be sent to your From: email</li>
-					<li>Only allowed to email a max of <strong>10</strong> emails currently</li>
-				</ul>
-    		</div>
-	    </div>
-	</div>
+    	</div>
+    </div>
+    <div class="row">
+    	<div class="six columns centered" id="helpbox">
+    		<div id="redline"></div>
+    		<h3 class="center">FAQ</h3>
+			<ul>
+				<li><strong>[First]</strong> will be replaced by the Names in the To: field</li>
+				<li>An <strong>email confirmation</strong> will be sent to your From: email</li>
+				<li>Only allowed to email a max of <strong>10</strong> emails currently</li>
+			</ul>
+		</div>
+    </div>
 	
 {% endblock %}

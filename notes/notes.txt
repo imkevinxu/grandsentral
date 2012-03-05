@@ -41,6 +41,7 @@ favicon
 responsive
 apple icon
 social icons (fb, twitter) on intro and success page
+ribbon for social icons
 made by...
 use mysql
 
@@ -56,6 +57,7 @@ Email Designkids, BASES, AKPsi
 ASSU Campaigns
 Email GDOCS - Mail Merge Interviews
 Email GDOCS - Survey People
+Greek - AKPsi, SYZ, KDPhi, Sigma Theta Psi (Bauer)
 
 USE CASES
 =========
@@ -65,3 +67,4 @@ Meetup Organizers
 	- All past attendees of eventbrite/meetup
 Event invitations
 Thank you letters
+Hallmark Industry
