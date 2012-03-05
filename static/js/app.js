@@ -10,12 +10,8 @@ $(document).ready(function () {
 		$('h1#title span').removeClass("focus");
 	});
 
-	$('#questionmark').on("hover", function() {
+	$('#questionmark').on("click", function() {
 		$('#helpbox').slideToggle(300);
-	}).on("click", function() {
-		var $helpbox = $('#helpbox');
-		$helpbox.slideToggle(300);
-		$(this).off("hover");
 	});
 
 	$('#addToBox').on("click", function() {

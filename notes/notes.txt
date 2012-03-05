@@ -10,6 +10,11 @@ LIMIT 200
 Optional BCC?
 Import CSV
 add README
+SLOW SERVER especially on confirmation (threads??)
+move to mysql
+perfect html email spacing
+diff variations of 'first'
+capitalize first name
 
 EMAIL PRIVACY DATABASE
 WYSIWYG Formatting
