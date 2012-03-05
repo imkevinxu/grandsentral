@@ -1,3 +1,7 @@
+/*	--------------------------------------------------
+	:: Custom CSS by Kevin Xu
+	-------------------------------------------------- */
+
 body { background: url(/static/img/purty_wood.png); }
 .center { text-align:center; }
 .error { color: red; }
@@ -112,11 +116,9 @@ h1#title span.focus { color: #CACACA; }
 
 
 
-
-/*
+/*	--------------------------------------------------
 	Helpbox FAQ
-
-*/
+	-------------------------------------------------- */
 
 #helpbox {
 	display:none;
@@ -135,10 +137,9 @@ h1#title span.focus { color: #CACACA; }
 
 
 
-/*
+/*	--------------------------------------------------
 	Holding and Success Page
-
-*/
+	-------------------------------------------------- */
 
 #success_page span { color:green; }
 #holding_page u { color: red; }
@@ -185,10 +186,10 @@ h1#title span.focus { color: #CACACA; }
 
 
 
-/*
-	Social Box
 
-*/
+/*	--------------------------------------------------
+	Social Box
+	-------------------------------------------------- */
 
 #socialbox {
 	margin-top:25px;
@@ -218,12 +219,9 @@ a#imkevinxu:active {
 	top:-1px;
 }
 
-
-
-/*
+/*	--------------------------------------------------
 	Paper Airplane Animation
-
-*/
+	-------------------------------------------------- */
 
 #letterbox #paperplane {
 	-webkit-animation: fly 1s;
