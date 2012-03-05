@@ -128,7 +128,7 @@ h1#title span.focus { color: #CACACA; }
 	box-shadow:         5px 5px 10px 0px #6F6E6F;
 }
 
-#helpbox ul { margin-left:70px; }
+#helpbox ul { margin-left:70px; padding-right:30px; }
 #helpbox li { list-style-type: disc; margin: 8px 0;}
 
 
@@ -212,6 +212,10 @@ a#imkevinxu {
 a#imkevinxu:hover {
 	color:inherit;
 	text-shadow: none;
+}
+
+a#imkevinxu:active {
+	top:-1px;
 }
 
 

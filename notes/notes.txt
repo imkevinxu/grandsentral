@@ -48,7 +48,7 @@ PLANE ANIMATION UPON CLICK!
 responsive
 social icons (fb, twitter) on intro and success page
 ribbon for social icons
-made by...
+about box
 use mysql
 minifiy js/css
 DEBUG=TRUE/FALSe
@@ -63,7 +63,7 @@ helper text as placeholder for email body
 
 MARKETING
 =========
-Facebook Page
+Blast Facebook Page
 Show HN
 Advertise in 21times
 check landit emails db

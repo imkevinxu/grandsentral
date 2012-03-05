@@ -11,8 +11,10 @@ $(document).ready(function () {
 	});
 
 	$('#questionmark').on("click", function() {
-		$('#helpbox').slideToggle(300);
-		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		var $helpbox = $('#helpbox');
+		if ($helpbox.css("display") == "none")
+			$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+		$helpbox.slideToggle(300);
 	});
 
 	$('#addToBox').on("click", function() {
