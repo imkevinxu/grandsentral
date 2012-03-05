@@ -17,6 +17,8 @@ diff variations of 'first'
 more variables like [last] [fullname]
 capitalize first name in body
 examples of use cases
+handwritten font for title
+tagline underneath title
 
 
 EMAIL PRIVACY DATABASE
