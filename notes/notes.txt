@@ -1,6 +1,5 @@
 ACTION ITEMS
 ============
-Email MENTORS with link
 BACKDATE BLOG with link
 
 Features
@@ -8,13 +7,15 @@ Features
 form validation
 LIMIT 200
 Optional BCC? to sent to self
-Import CSV
+Import CSV/Google doc
 add README
 SLOW SERVER especially on confirmation (threads??)
 move to mysql
+
 perfect html email spacing
 diff variations of 'first'
 more variables like [last] [fullname]
+[from] as variable
 capitalize first name in body
 examples of use cases
 handwritten font for title
@@ -40,6 +41,7 @@ Stripe payments
 Personalized mass texts using Twilio
 A way to organize contacts
 Error messages
+gmail plugin
 
 PLANE ANIMATION UPON CLICK!
 favicon
@@ -63,18 +65,14 @@ helper text as placeholder for email body
 MARKETING
 =========
 Facebook Page
-BASES E-Bootcamp / GEM
-Advertise in 21times
 Show HN
-check landit emails
-Facebook Groups - Think Outside, Stanford Startups
-Email Designkids, BASES
+Advertise in 21times
+check landit emails db
 ASSU Campaigns
 Email GDOCS - Mail Merge Interviews
 Email GDOCS - Survey People
 check stickies
-Greek - AKPsi, SYZ, KDPhi, Sigma Theta Psi (Bauer)
-ask tweets
+Tweet @ awesome list
 
 USE CASES
 =========

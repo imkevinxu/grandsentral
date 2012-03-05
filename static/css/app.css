@@ -184,6 +184,7 @@ h1#title span.focus { color: #CACACA; }
 }
 
 
+
 /*
 	Social Box
 
@@ -194,14 +195,16 @@ h1#title span.focus { color: #CACACA; }
 }
 
 .fb-like {
-	top:-2px;
+	vertical-align:top;
+	display:inline;
+	zoom:1;
 }
 
 a#imkevinxu {
 	color:white;
 	font-weight:bold;
 	font-size:20px;
-	top:-2px;
+	top:-3px;
 	position:relative;
 	text-shadow: 1px 1px 1px #000; 
 }

@@ -12,6 +12,7 @@ $(document).ready(function () {
 
 	$('#questionmark').on("click", function() {
 		$('#helpbox').slideToggle(300);
+		$("html, body").animate({ scrollTop: $(document).height() }, "slow");
 	});
 
 	$('#addToBox').on("click", function() {
