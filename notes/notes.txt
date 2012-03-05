@@ -20,6 +20,7 @@ capitalize first name in body
 examples of use cases
 handwritten font for title
 tagline underneath title
+check if confirm -> empty email data field
 
 
 EMAIL PRIVACY DATABASE
@@ -44,7 +45,6 @@ Error messages
 gmail plugin
 
 PLANE ANIMATION UPON CLICK!
-favicon
 responsive
 apple icon
 social icons (fb, twitter) on intro and success page
