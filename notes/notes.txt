@@ -21,7 +21,7 @@ examples of use cases
 handwritten font for title
 tagline underneath title
 check if confirm -> empty email data field
-
+move faqbox to right
 
 EMAIL PRIVACY DATABASE
 WYSIWYG Formatting
@@ -52,7 +52,7 @@ minifiy js/css
 DEBUG=TRUE/FALSe
 Turn on admin email in order to get error messages
 404/500
-BLOG
+BLOG http://projectlandit.wordpress.com/
 
 helper text when textbox in focus
 helper text next to + button
