@@ -20,7 +20,7 @@ def hold(request):
 		unformatted_body = request.POST["email_body"]
 
 		from_name = request.POST["email_from_name"]
-		from_email = request.POST["email_from_email"]
+		from_email = request.POST["email_from_email"].strip()
 
 		to_name_list = request.POST.getlist("email_recipients_name")
 		to_email_list = request.POST.getlist("email_recipients_email")
@@ -35,7 +35,7 @@ def hold(request):
 		for i in range(len(to_name_list)):
 			if to_name_list[i] == "" or to_email_list[i] == "": break
 			body = unformatted_body.replace("[First]", getFirstName(to_name_list[i]))
-			formatted_to_email_list.append(formatEmail(to_name_list[i], to_email_list[i]));
+			formatted_to_email_list.append(formatEmail(to_name_list[i], to_email_list[i].strip()));
 
 			email = Email(from_name = from_name,
 						  from_email = from_email,

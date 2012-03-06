@@ -2,13 +2,13 @@ Features
 ========
 form validation
 REDO /HOLD PAGE (less data) AND CONFIRMATION EMAIL (more data)
-LIMIT 200
+MAKE a new SENT CONFIRMATION email that links to a page of emails sent by person/that particular link
+add data model to confirm email of "from_email"
 Optional BCC? to sent to self
 Import CSV/Google doc
 add README
 SLOW SERVER especially on confirmation (threads??)
 move to mysql
-get rid of emailing bcc at sendgrid?????
 
 perfect html email spacing
 diff variations of 'first'
@@ -20,6 +20,8 @@ handwritten font for title
 tagline underneath title
 check if confirm -> empty email data field
 move faqbox to right
+pencil graphic
+preview???
 
 EMAIL PRIVACY DATABASE
 WYSIWYG Formatting
@@ -64,9 +66,6 @@ Show HN
 Advertise in 21times
 
 check landit emails db
-ASSU Campaigns
-check stickies
-Tweet @ awesome list
 
 USE CASES
 =========
