@@ -30,7 +30,7 @@ def hold(request):
 			reader = csv.reader(csvfile, delimiter=',')
 			for row in reader:
 				to_name_list.append(row[0])
-				to_email_list.append(row[1])
+				to_email_list.append(row[1].strip())
 		else:
 			to_name_list = request.POST.getlist("email_recipients_name")
 			to_email_list = request.POST.getlist("email_recipients_email")
