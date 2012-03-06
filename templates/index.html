@@ -13,18 +13,20 @@
 		    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
 		    <div id="questionmark">?</div>
 
-		    <form action="{% url hold %}" method="post" class="nice">{% csrf_token %}
+		    <form action="{% url hold %}" method="post" class="nice" enctype="multipart/form-data">{% csrf_token %}
 		    	<div id="frombox">
-		    		<span class="context">From</span>
+		    		<span class="from context">From</span>
 		    		<input type="text" name="email_from_name" class="input-text name" placeholder="Name" />
 		    		<input type="text" name="email_from_email" class="input-text email" placeholder="Email" />
 		    	</div>
 
 		    	<div class="tobox">
-		    		<span class="context">To</span>
+		    		<span class="to context">To</span>
 		    		<input type="text" name="email_recipients_name" class="input-text name" placeholder="Name" />
 		    		<input type="text" name="email_recipients_email" class="input-text email" placeholder="Email" />
 		    	</div>
+
+	    		<input type="file" id="csv_file" name="csv_file" style="margin: 0 0 8px 285px; display:none;"/>
 
 		    	<div id="addToBox">+</div>
 

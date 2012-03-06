@@ -29,6 +29,10 @@ $(document).ready(function () {
 		}
 	});
 
+	$('.to').on("click", function() {
+		$("#csv_file").fadeToggle(300);
+	})
+
 	$('textarea#email_body').on("focus", function() {
 		$this = $(this);
 		$this.text("");

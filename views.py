@@ -1,3 +1,4 @@
+import os, csv
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.core.context_processors import csrf
@@ -6,7 +7,6 @@ from django.template.loader import render_to_string
 from django.core.mail import send_mail, send_mass_mail, EmailMultiAlternatives
 from datetime import datetime
 from binascii import hexlify
-import os
 from emails.models import Email, Confirm
 
 def home(request):
@@ -22,8 +22,18 @@ def hold(request):
 		from_name = request.POST["email_from_name"]
 		from_email = request.POST["email_from_email"].strip()
 
-		to_name_list = request.POST.getlist("email_recipients_name")
-		to_email_list = request.POST.getlist("email_recipients_email")
+		# CSV IMPORTING
+		to_name_list = []
+		to_email_list = []
+		if request.FILES != {}:
+			csvfile = request.FILES['csv_file']
+			reader = csv.reader(csvfile, delimiter=',')
+			for row in reader:
+				to_name_list.append(row[0])
+				to_email_list.append(row[1])
+		else:
+			to_name_list = request.POST.getlist("email_recipients_name")
+			to_email_list = request.POST.getlist("email_recipients_email")
 
 		#TODO: QUICK HACKY FORM VALIDATION
 		if subject == "" or unformatted_body == "" or from_name == "" or to_name_list[0] == "" or to_email_list[0] == "":
