@@ -1,12 +1,14 @@
 Features
 ========
 form validation
+REDO /HOLD PAGE (less data) AND CONFIRMATION EMAIL (more data)
 LIMIT 200
 Optional BCC? to sent to self
 Import CSV/Google doc
 add README
 SLOW SERVER especially on confirmation (threads??)
 move to mysql
+get rid of emailing bcc at sendgrid?????
 
 perfect html email spacing
 diff variations of 'first'
@@ -48,6 +50,7 @@ minifiy js/css
 DEBUG=TRUE/FALSe
 Turn on admin email in order to get error messages
 404/500
+about/contact/etc pages on bottom like momento
 BLOG http://projectlandit.wordpress.com/
 
 helper text when textbox in focus
@@ -62,8 +65,6 @@ Advertise in 21times
 
 check landit emails db
 ASSU Campaigns
-Email GDOCS - Mail Merge Interviews
-Email GDOCS - Survey People
 check stickies
 Tweet @ awesome list
 

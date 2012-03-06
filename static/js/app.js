@@ -18,7 +18,7 @@ $(document).ready(function () {
 	});
 
 	$('#addToBox').on("click", function() {
-		if ($('.tobox').length < 100) {
+		if ($('.tobox').length < 10) {
 			var $tobox = $('.tobox').first().clone();
 			$tobox.find('span.context').css("text-indent", "-9999px")
 				  .end()
