@@ -207,16 +207,36 @@ a#imkevinxu {
 	font-size:20px;
 	top:-3px;
 	position:relative;
-	text-shadow: 1px 1px 1px #000; 
+	text-shadow: 0px 0px 2px #000;
 }
 
 a#imkevinxu:hover {
-	color:inherit;
+	color:black;
 	text-shadow: none;
 }
 
 a#imkevinxu:active {
 	top:-1px;
+}
+
+a#blog {
+	color:#fff;
+	font-size:25px;
+	font-weight:bold;
+	font-family: 'Vollkorn', serif;
+	top:25px;
+	line-height:32px;
+	position:relative;
+	text-shadow: 0px 0px 3px #000;
+}
+
+a#blog:hover {
+	color:black;
+	text-shadow: none;
+}
+
+a#blog:active {
+	top:27px;
 }
 
 /*	--------------------------------------------------
