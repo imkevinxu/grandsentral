@@ -1,16 +1,18 @@
 Features
 ========
 form validation
+meta: description
 REDO /HOLD PAGE (less data) AND CONFIRMATION EMAIL (more data)
 MAKE a new SENT CONFIRMATION email that links to a page of emails sent by person/that particular link
 add data model to confirm email of "from_email"
-Optional BCC? to sent to self
-Import CSV/Google doc
+**Optional BCC? to sent to self
+**Import CSV/Google doc -- more variables
 add README
 SLOW SERVER especially on confirmation (threads??)
 move to mysql
+**uservoice feedback
 
-perfect html email spacing
+**perfect html email spacing
 diff variations of 'first'
 more variables like [last] [fullname]
 [from] as variable
@@ -21,11 +23,13 @@ tagline underneath title
 check if confirm -> empty email data field
 move faqbox to right
 pencil graphic
-preview???
+**preview???
+design it with a storyboard showing how different then gmail
 
 EMAIL PRIVACY DATABASE
-WYSIWYG Formatting
+**WYSIWYG Formatting
 CSS paragraph styling mail merged emails in html_content
+	- getfractal code
 allow subject to have name
 "Powered by" - in graay and free emails
 ask for bugs
@@ -54,6 +58,7 @@ Turn on admin email in order to get error messages
 404/500
 about/contact/etc pages on bottom like momento
 BLOG http://projectlandit.wordpress.com/
+Aboutme
 
 helper text when textbox in focus
 helper text next to + button
@@ -67,6 +72,18 @@ Advertise in 21times
 
 check landit emails db
 
+lifehacker/email/productivity blogs
+email ruoyu
+
+USERS
+=====
+AKPsi
+Tentative
+	ASES
+	BASES
+	SYZ
+	KDPhi
+
 USE CASES
 =========
 Community Management
@@ -76,3 +93,4 @@ Meetup Organizers
 Event invitations
 Thank you letters
 Hallmark Industry
+Direct Marketing Association
