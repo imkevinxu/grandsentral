@@ -9,6 +9,8 @@ add data model to confirm email of "from_email"
 **Import CSV/Google doc -- more variables
 add README
 SLOW SERVER especially on confirmation (threads??)
+spam warning on confirmation page
+http://blog.kicksend.com/how-we-decreased-sign-up-confirmation-email-b
 move to mysql
 **uservoice feedback
 
@@ -27,7 +29,7 @@ pencil graphic
 design it with a storyboard showing how different then gmail
 
 EMAIL PRIVACY DATABASE
-**WYSIWYG Formatting
+**WYSIWYG Formatting http://jhollingworth.github.com/bootstrap-wysihtml5/
 CSS paragraph styling mail merged emails in html_content
 	- getfractal code
 allow subject to have name
@@ -65,6 +67,7 @@ helper text next to + button
 helper text as placeholder for email body
 
 
+
 MARKETING
 =========
 Show HN
@@ -73,7 +76,7 @@ Advertise in 21times
 check landit emails db
 
 lifehacker/email/productivity blogs
-email ruoyu
+answer quora question on merge
 
 USERS
 =====

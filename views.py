@@ -1,4 +1,4 @@
-import os, csv
+import os, csv, codecs
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.core.context_processors import csrf
@@ -27,7 +27,9 @@ def hold(request):
 		to_email_list = []
 		if request.FILES != {}:
 			csvfile = request.FILES['csv_file']
-			reader = csv.reader(csvfile, delimiter=',')
+			dialect = csv.Sniffer().sniff(codecs.EncodedFile(csvfile, "utf-8").read(1024))
+			csvfile.open()
+			reader = csv.reader(codecs.EncodedFile(csvfile, "utf-8"), delimiter=',', dialect=dialect)
 			for row in reader:
 				to_name_list.append(row[0])
 				to_email_list.append(row[1].strip())
