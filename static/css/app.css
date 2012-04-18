@@ -36,6 +36,7 @@ h1#title span.focus { color: #CACACA; }
 
 #letterbox {
 	z-index:100;
+	width:468px;
 	padding:16px 30px 20px 60px;
 	background: url(/static/img/lined-paper-background.png) 0px 6px;
 	-moz-box-shadow:    5px 5px 10px 0px #6F6E6F;
@@ -92,6 +93,7 @@ h1#title span.focus { color: #CACACA; }
 #letterbox textarea#email_body {
 	height:270px;
 	width:95%;
+	padding:10px;
 }
 
 #letterbox #submitbox input { width: 95%; }
