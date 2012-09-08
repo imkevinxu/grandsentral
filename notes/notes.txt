@@ -35,6 +35,7 @@ CSS paragraph styling mail merged emails in html_content
 allow subject to have name
 "Powered by" - in graay and free emails
 ask for bugs
+SEO http://danshipper.com/123815408?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+danshipper+%28dan+shipper%29
 
 Multiple variables
 NLP To: box -> Tagged blocks for user feedback

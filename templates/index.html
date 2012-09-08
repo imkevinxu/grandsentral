@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    
+
     <div class="row">
     	<div class="columns centered" id="letterbox">
-		
+
 			<div id="paperplane">
 				<a href="{% url home %}"><img src="/static/img/paperplane.png" alt="GrandSentral paper plane" id="paperplane"></a>
 			</div>
@@ -12,6 +12,8 @@
 
 		    <h1 id="title" class="center"><a href="{% url home %}">Grand<span>Sent</span>ral</a></h1>
 		    <div id="questionmark">?</div>
+
+            <p class="error">Sorry, GrandSentral is currently down. We apologize for the inconvenience.</p>
 
 		    <form action="{% url hold %}" method="post" class="nice" enctype="multipart/form-data">{% csrf_token %}
 		    	<div id="frombox">
@@ -34,7 +36,7 @@
 		    		<span class="context">Subject</span>
 		    		<input type="text" name="email_subject" class="input-text" />
 		    	</div>
-		    	
+
 		    	<div id="emailbox">
 		    		<textarea cols="40" rows="8" name="email_body" id="email_body">Hi [First],
 
@@ -47,7 +49,7 @@ GrandSentral Team</textarea>
 		    	</div>
 
 		    	<div id="submitbox">
-		    		<input type="submit" value="Send" class="nice large blue button" />
+		    		<input type="submit" value="Send" class="nice large blue button" disabled />
 		    	</div>
 		    </form>
 
@@ -65,5 +67,5 @@ GrandSentral Team</textarea>
 			</ul>
 		</div>
     </div>
-	
+
 {% endblock %}
